@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
 echo "creating user prome node_exporter"
 useradd --no-create-home --shell /bin/false prome
 useradd --no-create-home --shell /bin/false node_exporter
