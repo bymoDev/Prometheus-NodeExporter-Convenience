@@ -24,6 +24,8 @@ cp -r prometheus-2.0.0.linux-amd64/consoles /etc/prometheus
 cp -r prometheus-2.0.0.linux-amd64/console_libraries /etc/prometheus
 
 rm -r prometheus-2.0.0.linux-amd64/
+rm -r node_exporter-1.0.1.linux-amd64/
+rm prometheus-2.0.0.linux-amd64.tar.gz
 
 chown prome:prome /usr/local/bin/prometheus
 chown prome:prome /usr/local/bin/promtool
